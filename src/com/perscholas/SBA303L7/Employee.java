@@ -1,20 +1,23 @@
 package com.perscholas.SBA303L7;
 
 import java.util.ArrayList;
-
+	/*	303.7 Practice SBA
+	● Create a class with the name employee.
+	● Add three fields of type string. firstName,lastName and department.*/
 public class Employee {
 
 	String firstName;
 	String lastName;
 	String department;
 
+	// ● Create a constructor with all three fields.
 	public Employee(String firstName, String lastName, String department) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.department = department;
 	}
-
+	// ● Create Getter and Setter methods.
 	public String getFirstName() {
 		return firstName;
 	}
@@ -39,6 +42,10 @@ public class Employee {
 		this.department = department;
 	}
 
+	/*
+	 ● Override the toString method to print out the employees First name, 
+	 Last name and department. 
+	 */
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -47,6 +54,13 @@ public class Employee {
 				+ " Department: " + this.department;
 	}
 
+	/*
+	 2. Given the three following arrays
+		  String[] firstName = {"Harold","Luciano","Tyree","Nyla","Natalie","Quincy","Devyn","Aliana"};
+		  String[] lastName = {"Riddle","Zavala","Ho","Saunders","Morgan","Schroeder","Nolan","Orr"};
+		  String[] department = {"production","r&d","sales","marketing","human resources","accounting","sales","r&d"}; 
+		  */
+	
 	public static void main(String[] args) {
 
 		String[] firstName = { "Harold", "Luciano", "Tyree", "Nyla", "Natalie", "Quincy", "Devyn", "Aliana" };
@@ -58,6 +72,11 @@ public class Employee {
 		
 	}
 
+	/*	   
+	3. Create a method that will add the first name, last name and department to a new employee object. 
+	And return an ArrayList of those employees.
+
+	 */
 	public static ArrayList<Employee> addEmployees( String[] first, 
 													String[] last, 
 													String[] department) {
@@ -72,29 +91,7 @@ public class Employee {
 		return employees;
 
 	}
-	/*	303.7 Practice SBA
-		 ● Create a class with the name employee.
-		● Add three fields of type string. firstName,lastName and
-		department.
-		 
-		● Create a constructor with all three fields.
-		● Create Getter and Setter methods.
-		● Override the toString method to print out the employees First
-		name, Last name and department.
-		
-		2. Given the three following arrays
-		  String[] firstName = {"Harold", "Luciano", "Tyree", "Nyla",
-		  "Natalie", "Quincy", "Devyn", "Aliana"};
-		  String[] lastName = {"Riddle", "Zavala", "Ho", "Saunders",
-		  "Morgan", "Schroeder", "Nolan", "Orr"};
-		  String[] department = {"production", "r&d", "sales",
-		  "marketing", "human resources", "accounting", "sales",
-		  "r&d"};
-		  
-		3. Create a method that will add the first name, last name and department to a new employee object. 
-		And return an ArrayList of those employees.
 	
-	 */
 	
 }
 
